@@ -1,0 +1,246 @@
+%-------------------------
+% Resume in Latex
+% Author : Shubhi Rani
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+\usepackage{xcolor}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize\color{gray}Last updated on #1}}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Ankan Bhattacharyya}} & \href{https://orcid.org/0000-0002-5399-8703}{ORCID: 0000-0002-5399-8703} \\
+  \href{https://github.com/iamankan}{GitHub: iamankan} & Email : \href{mailto:ankan.bhattacharyya@uky.edu}{ankan.bhattacharyya@uky.edu}  
+   \\ \href{https://www.linkedin.com/in/ankancs94/}{Linkedin: https://www.linkedin.com/in/ankancs94/} & {Phone: +1-859-693-2628}
+   \\ \href{https://scholar.google.co.in/citations?user=oGPRM7gAAAAJ}{Google Scholar: https://scholar.google.co.in/citations?user=oGPRM7gAAAAJ}  
+  
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Kentucky}{Lexington, KY}
+      {PhD in Computer Science;  GPA: 3.6}{Aug 2021 - Current}
+      
+	   {\scriptsize \textit{Courses: Computer Graphics, Computer Vision, Biomedical Imaging, NLP, Algotirhms, Machine Learning}}
+	   ({\scriptsize \textit{Supervisor: \href{https://www.engr.uky.edu/directory/seales-brent}{Dr. Brent Seales}}})
+	    
+    \resumeSubheading
+      {West Bengal University of Technology}{West Bengal, India}
+      {Bachelor of Technology in Computer Science and Engineering;  GPA: 8.59/10}{Aug 2013 - May 2017}
+      
+      {\scriptsize \textit{Thesis: Recognition of Online Handwritten Bangla Words (Supervisor: \href{https://dblp.org/pid/185/4071.html}{Dr. Shibaprasad Sen})}}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Digital Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{Java, C++, Python, C, SQL, Unix scripting}
+	\resumeSubItem{Libraries and Framework}{OpenGL, OpenCV, OpenMVG, OpenMVS, Tensorflow, Serverless}
+	\resumeSubItem{Tools and Services}{Git, Docker, Singularity, AWS}
+\resumeSubHeadingListEnd
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {University of Kentucky}{Lexington, KY}
+    {Graduate Research Assistant}{June 2022 -  Current}
+    
+    \textit{Principal Investigator: \href{https://www.engr.uky.edu/directory/seales-brent}{Dr. Brent Seales}}
+    
+    \textit{Lab: \href{https://www2.cs.uky.edu/dri/}{EduceLab}}
+    \resumeItemListStart
+        \resumeItem{Multispectral Imaging}
+          {Designed a pipeline that takes in multispectral images of damaged pages with having washed out inks, and performs image composition to reveal the contents those are not visible to the naked eyes.}
+        \resumeItem{Smithsonian 3D Viewer}
+          {The Smithsonian Institution is the world’s largest museum, education, and research complex, with 21 museums and the National Zoo—shaping the future by preserving heritage, discovering new knowledge, and sharing our resources with the world. They have an open-source online 3D viewer, known as the \href{https://3d.si.edu/object/3d/mammuthus-primigenius-blumbach:341c96cd-f967-4540-8ed1-d3fc56d31f12}{Voyager}, to visualize 3D object in the web. I worked on making a pipeline that takes our photogrammetry data, process it in the form that the viewer can show it in the web.}
+          
+      \resumeItemListEnd
+      \resumeSubheading
+    {University of Kentucky}{Lexington, KY}
+    {Graduate Teaching Assistant}{August 2021 -  May 2022}
+    
+    \textit{Supervisor: \href{https://www.engr.uky.edu/directory/seales-brent}{Dr. Brent Seales}}
+      \resumeItemListStart
+        \resumeItem{Computer Graphics and Image Processing}
+          {Designed UI for image morphing, image blurring, interactive games like, minesweeper, flood fill algorithm, baezier curve, spline, and image warping.}
+          
+      \resumeItemListEnd
+      
+
+    \resumeSubheading
+    {Cognizant Technology Solutions}{West Bengal, India}
+    {AWS/NodeJS Developer}{Sept 2017 - July 2022}
+    \resumeItemListStart
+        \resumeItem{iSearch}
+          {Built a voice enabled, multi-lingual search engine, that helped reduce the number of clicks drastically to a single click, thus increasing hotel booking by a decent amount.}
+          \resumeItem{Notification system}
+          {Built new notification framework, that helped emailing and sms opt-in during hotel booking, and implemented in layers, that is used by several different projects being developed by the client.}
+          \resumeItem{GDPR}
+          {Implemented GDPR, after being enforced by Europe in 2016, for asking permission to otp-in and out from notifications regarding business offers, etc.}
+          \resumeItem{Automated ticketing item}
+          {Automated assignment Service Desk Tickets using NLP to concerned groups for resolution.}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+    {Jadavpur University}{West Bengal, India}
+    {Machine Learning Intern}{Summer 2016}
+    \resumeItemListStart
+        \item{
+          Developed a semi-automatic system for Online Handwritten Text Recognition
+          }
+          \item{
+          Studied Language Ground Truth for Bangla Script
+          }
+          \item{
+          Segmentation and Recognition of online words into constituent strokes
+          }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------Publications-----------------
+\section{Publications}
+\resumeItemListStart
+\item{
+\textbf{Ankan Bhattacharyya}, Soumyajit Saha, Shibaprasad Sen, Seyedali Mirjalili, Ram Sarkar, "Deep Feature Selection Using Moth-Flame Optimization for Facial Expression Recognition from Thermal Images", Handbook of Moth-Flame Optimization Algorithm: Variants, Hybrids, Improvements, and Applications (1st ed.). CRC Press. (2022) (\href{https://doi.org/10.1201/9781003205326}{https://doi.org/10.1201/9781003205326})
+}
+\item{
+\textbf{Ankan Bhattacharyya}, Rajatsubhra Chakraborty, Soumyajit Saha, Shibaprasad Sen, Ram Sarkar, Kaushik Roy, "A Two-Stage Deep Feature Selection Method for Online Handwritten Bangla and Devanagari Basic Character Recognition", SN Computer Science, Progresses in Image Processing (2022) (\href{https://doi.org/10.1007/s42979-022-01157-2}{https://doi.org/10.1007/s42979-022-01157-2})
+}
+
+\item{
+\textbf{Ankan Bhattacharyya}, Somnath Chatterjee, Shibaprasad Sen, Aleksandr Sinitca, Dmitrii Kaplun, Ram Sarkar, "A deep learning model for classifying human facial expressions from infrared thermal images", Scientific Reports, Nature (2021) (\href{https://doi.org/10.1038/s41598-021-99998-z}{https://doi.org/10.1038/s41598-021-99998-z})
+}
+
+\item{
+Shibaprasad Sen, \textbf{Ankan Bhattacharyya}, Ram Sarkar, Kaushik Roy, "BYANJON: A Ground Truth Preparation System for Online Handwritten Bangla Documents", ACM Transactions on Asian and Low-Resource Language Information Processing (2021) (\href{https://doi.org/10.1145/3464379}{https://doi.org/10.1145/3464379})
+}
+
+\item{
+Rajatshubra Chakraborty, Soumyajit Saha, \textbf{Ankan Bhattacharyya}, Shibaprasad, Sen, Ram Sarkar, K. Roy, “Recognition of Online Handwritten Bangla and Devanagari
+Basic Characters: A Transfer Learning Approach”, 5th IAPR International Conference on Computer Vision \& Image Processing (IAPR CVIP2020) (2020) (\href{https://doi.org/10.1007/978-981-16-1092-9_45}{https://doi.org/10.1007/978-981-16-1092-9\_45})
+}
+
+\item{
+Rajatsubhra Chakraborty, Debadrita Mukherjee, \textbf{Ankan Bhattacharyya}, Himadri Mukherjee, Monoj Kumar Sur, Shibaprasad Sen, Kaushik Roy, “Online Handwritten Bangla and Devanagari Character Recognition by using CNN: A Deep Learning Concept”, EEE 1st International Conference for Convergence in Engineering (ICCE) (2020) (\href{https://doi.org/10.1109/ICCE50343.2020.9290566}{https://doi.org/10.1109/ICCE50343.2020.9290566})
+}
+
+\item{
+Shibaprasad Sen, Mridul Mitra, \textbf{Ankan Bhattacharyya}, Ram Sarkar, Friedhelm Schwenker, Kaushik Roy , “Feature Selection for Recognition of Online Handwritten Bangla Characters”, Neural Processing Letters (2020) (\href{https://doi.org/10.1007/s11063-019-10010-2}{https://doi.org/10.1007/s11063-019-10010-2})
+}
+
+\item{
+Shibaprasad Sen, \textbf{Ankan Bhattacharyya}, Kaushik Roy, “The Effect of Using Features Computed from Generated Offline Images for Online Bangla Handwritten Character Recognition”, Document Processing Using Machine Learning (2019) (\href{https://doi.org/10.1201/9780429277573}{https://doi.org/10.1201/9780429277573})
+}
+
+
+\item{
+Shibaprasad Sen, \textbf{Ankan Bhattacharyya}, Mridul Mitra, Kaushik Roy, Sudip Kumar Naskar, Ram Sarkar, “Online Bangla handwritten word recognition using HMM and language model”, Neural Computing and Applications (2019) (\href{https://doi.org/10.1007/s00521-019-04518-w}{https://doi.org/10.1007/s00521-019-04518-w})
+}
+
+\item{
+Shibaprasad Sen, \textbf{Ankan Bhattacharyya}, Pawan Kumar Singh, Ram Sarkar, Kaushik Roy, David Doermann, “Application of structural and topological features to recognize online handwritten Bangla characters”, ACM Transactions on Asian and Low-Resource Language Information Processing (2018) (\href{https://doi.org/10.1145/3178457}{https://doi.org/10.1145/3178457})
+}
+Shibaprasad Sen, \textbf{Ankan Bhattacharyya}, Avik Das, Ram Sarkar, Kaushik Roy
+\item{
+Shibaprasad Sen, \textbf{Ankan Bhattacharyya}, Avik Das, Ram Sarkar, Kaushik Roy, “Design of novel feature vector for recognition of online handwritten Bangla basic characters”, Proceedings of the First International Conference on Intelligent Computing and Communication (2017) (\href{https://doi.org/10.1007/978-981-10-2035-3_50}{https://doi.org/10.1007/978-981-10-2035-3\_50})
+}
+
+\resumeItemListEnd
+
+%-----------Awards-----------------
+\section{Honors and Awards}
+\begin{description}[font=$\bullet$]
+\item {UniPi Merit Scholarship for Master's Degree (Laurea Magistrale) in Computer Science A.Y. 2021/2022 awarded by University of Pisa, Italy (Did not avail)}
+\item {Participated in “Young IT Professional Award” (YITPA) organized by Computer Society of India, in 2020.}
+\item {Most Valuable Player (MVP) 2019, from Travel \& Hospitality, Cognizant for outstanding performance in contributing to the
+Domain.}
+\item {First prize in Ideathon 2018 Hackathon in Cognizant, as a team.}
+\item {The Best Project Award by Cognizant, in 2017.}
+% \item {Presented a conference paper entitled \href{https://doi.org/10.1007/978-981-10-2035-3_50}{“Design of novel feature vector for recognition of online handwritten bangla basic characters”}
+% at ICIC2 Conference organized by the University of Kalyani, in 2016}
+\item {Outstanding Student Paper Award, \href{https://doi.org/10.1038/s41598-021-99998-z}{"A deep learning model for classifying human facial expressions from infrared thermal images"}University of Kentucky, Department of Computer Science, April 2022.}
+\end{description}
+
+%-------------------------------------------
+\updateinfo
+\end{document}
