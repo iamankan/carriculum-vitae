@@ -1,0 +1,59 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push
+on: [push]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Checkout
+      uses: actions/checkout@master
+      with:
+        submodules: 'true'
+
+    - name: Install latex
+      run: |
+        sudo apt-get install \
+        texlive \
+        texlive-latex-extra \
+        texlive-latex-recommended \
+        texlive-luatex \
+        texlive-bibtex-extra biber \
+        latexmk
+    # Build the document
+    - name: Build and compress the document
+      run: make
+
+    # Rename doc
+    - name: Rename the compressed document
+      run: |
+        cp build/cv.pdf $(TZ=America/New_York date +%Y%m%d_%H%M%S)-ABH-CV.pdf && \
+        cp build/cv.pdf abh-curriculum-vitae.pdf
+    # Upload pdf artifact
+    - name: Upload PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: PDF
+        path: '*-ABH-CV.pdf'
+
+    # Push pdf to github.io site
+    - name: Push CV to github.io repo
+      if: github.ref == 'refs/heads/main'
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'abh-curriculum-vitae.pdf'
+        destination_repo: 'iamankan/iamankan.github.io'
+        user_email: 'ankan.bhattacharyya.94@gmail.com'
+        user_name: 'iamankan'
+        commit_message: 'Update CV'
