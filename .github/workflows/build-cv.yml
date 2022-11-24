@@ -53,7 +53,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'abh-curriculum-vitae.pdf'
-        destination_repo: 'iamankan/iamankan'
+        destination_repo: 'iamankan/carriculum-vitae'
         user_email: 'ankan.bhattacharyya.94@gmail.com'
         user_name: 'iamankan'
         commit_message: 'Update CV'
