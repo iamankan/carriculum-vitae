@@ -50,7 +50,7 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        API_TOKEN_GITHUB: ${{ secrets.Token1 }}
       with:
         source_file: 'abh-curriculum-vitae.pdf'
         destination_repo: 'iamankan/iamankan.github.io'
