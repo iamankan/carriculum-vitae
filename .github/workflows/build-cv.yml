@@ -55,5 +55,5 @@ jobs:
         source_file: 'abh-curriculum-vitae.pdf'
         destination_repo: 'iamankan/iamankan.github.io'
         user_email: 'ankan.bhattacharyya.94@gmail.com'
-#         user_name: 'iamankan'
+        user_name: 'ankan.bhattacharyya.94@gmail.com'
         commit_message: 'Update CV'
