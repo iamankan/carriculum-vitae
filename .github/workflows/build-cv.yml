@@ -40,7 +40,7 @@ jobs:
         cp build/cv.pdf abh-curriculum-vitae.pdf
     # Upload pdf artifact
     - name: Upload PDF
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: PDF
         path: '*-ABH-CV.pdf'
