@@ -28,7 +28,7 @@ jobs:
         texlive-latex-recommended \
         texlive-luatex \
         texlive-bibtex-extra biber \
-        latexmk -pdf -interaction=nonstopmode -halt-on-error cv.tex
+        latexmk
     # Build the document
     - name: Build and compress the document
       run: make
