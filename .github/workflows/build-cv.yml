@@ -22,7 +22,8 @@ jobs:
 
     - name: Install latex
       run: |
-        sudo apt-get install \
+        sudo apt-get update
+        sudo apt-get install -y \
         texlive \
         texlive-latex-extra \
         texlive-latex-recommended \
